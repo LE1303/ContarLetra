@@ -1,0 +1,23 @@
+package contl;
+import java.util.Scanner;
+
+public class contletra {
+	public static void main(String[] args) {
+		Scanner let = new Scanner(System.in);
+		System.out.print("Ingresa una palabra: ");
+		String palabra = let.nextLine();//nextLine() nos sirve para leer un dato de tipo long, lee un string hasta encontrar un salto de linea
+	      System.out.print("Ingresa una letra: ");
+	      char letra = let.nextLine().charAt(0);//devuelve la posicion del caracter
+	      
+	      int contador = 0;
+
+	      for (int i = 0; i < palabra.length(); i++) {// el .length se utiliza para devolver un valor entero que indica el numero de caracteres en la cadena de entrada
+	         if (palabra.charAt(i) == letra) {//charAt nos sirve para sacar un caracter de la cadena
+	            contador++;
+	         }
+	      }
+
+	      System.out.println("La letra '" + letra + "' se repite " + contador + " veces en la palabra '" + palabra + "'.");
+	   }
+		
+	}
